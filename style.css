@@ -118,3 +118,21 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.notify{
+position:fixed;
+top:20px;
+right:-400px;
+background:#1b1b1b;
+color:white;
+padding:16px 22px;
+border-left:4px solid gold;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.5s;
+z-index:999;
+font-weight:bold;
+}
+
+.notify.show{
+right:20px;
+}
