@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxChat</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>LuxChat</h1>
+        <span>Everyone can join instantly</span>
+    </div>
+
+    <div id="chatBox" class="chatBox"></div>
+
+    <div class="bottom">
+
+        <input
+        id="username"
+        placeholder="Your Name">
+
+        <textarea
+        id="message"
+        placeholder="Type your message..."></textarea>
+
+        <button id="sendBtn">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
