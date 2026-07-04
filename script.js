@@ -7,22 +7,7 @@ const username = document.getElementById("username");
 const message = document.getElementById("message");
 const sendBtn = document.getElementById("sendBtn");
 const chatBox = document.getElementById("chatBox");
-const notify = document.getElementById("notify");
-const ding = document.getElementById("ding");
 
-let myName = "";
-
-function showNotification(text){
-
-notify.innerText="🔔 "+text;
-
-notify.classList.add("show");
-
-setTimeout(()=>{
-notify.classList.remove("show");
-},3000);
-
-}
 
 async function loadMessages() {
     const { data, error } = await client
@@ -55,7 +40,6 @@ function addMessage(msg) {
 }
 
 sendBtn.onclick = async () => {
-myName = username.value.trim();
     if(username.value.trim()==="" || message.value.trim()===""){
         alert("Enter your name and message");
         return;
