@@ -7,6 +7,19 @@ const username = document.getElementById("username");
 const message = document.getElementById("message");
 const sendBtn = document.getElementById("sendBtn");
 const chatBox = document.getElementById("chatBox");
+const notify = document.getElementById("notify");
+
+function showNotification(text){
+
+notify.innerText="🔔 "+text;
+
+notify.classList.add("show");
+
+setTimeout(()=>{
+notify.classList.remove("show");
+},3000);
+
+}
 
 async function loadMessages() {
     const { data, error } = await client
