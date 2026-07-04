@@ -8,6 +8,9 @@ const message = document.getElementById("message");
 const sendBtn = document.getElementById("sendBtn");
 const chatBox = document.getElementById("chatBox");
 const notify = document.getElementById("notify");
+const ding = document.getElementById("ding");
+
+let myName = "";
 
 function showNotification(text){
 
