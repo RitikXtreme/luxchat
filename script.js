@@ -83,8 +83,16 @@ client
         table:"messages"
     },
     payload=>{
-        addMessage(payload.new);
-        chatBox.scrollTop = chatBox.scrollHeight;
+
+addMessage(payload.new);
+
+chatBox.scrollTop=chatBox.scrollHeight;
+
+showNotification(
+payload.new.username+" sent a message"
+);
+
+    }
     }
 )
 .subscribe();
