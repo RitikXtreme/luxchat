@@ -55,7 +55,7 @@ function addMessage(msg) {
 }
 
 sendBtn.onclick = async () => {
-
+myName = username.value.trim();
     if(username.value.trim()==="" || message.value.trim()===""){
         alert("Enter your name and message");
         return;
