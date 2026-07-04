@@ -136,3 +136,21 @@ font-weight:bold;
 .notify.show{
 right:20px;
 }
+.notify{
+    position:fixed;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%) translateY(-100px);
+    background:#FFD000;
+    color:#111;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:bold;
+    box-shadow:0 10px 30px rgba(255,208,0,.35);
+    transition:.35s;
+    z-index:9999;
+}
+
+.notify.show{
+    transform:translateX(-50%) translateY(0);
+}
