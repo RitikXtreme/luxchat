@@ -44,7 +44,7 @@ sendBtn.onclick = async () => {
         alert("Enter your name and message");
         return;
     }
-
+myName = username.value.trim();
     const { error } = await client
         .from("messages")
         .insert({
