@@ -65,22 +65,16 @@ client
 .on(
     "postgres_changes",
     {
-        event:"INSERT",
-        schema:"public",
-        table:"messages"
+        event: "INSERT",
+        schema: "public",
+        table: "messages"
     },
-    payload=>{
+    (payload) => {
 
-addMessage(payload.new);
+        addMessage(payload.new);
 
-chatBox.scrollTop=chatBox.scrollHeight;
+        chatBox.scrollTop = chatBox.scrollHeight;
 
-
-payload => {
-    addMessage(payload.new);
-    chatBox.scrollTop = chatBox.scrollHeight;
-}
-    }
     }
 )
 .subscribe();
