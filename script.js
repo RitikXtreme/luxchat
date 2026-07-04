@@ -108,5 +108,3 @@ payload.new.username + " sent a message"
 }
 )
 .subscribe();
-
-loadMessages();
