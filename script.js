@@ -91,9 +91,15 @@ addMessage(payload.new);
 
 chatBox.scrollTop=chatBox.scrollHeight;
 
+if(payload.new.username !== myName){
+
+ding.play();
+
 showNotification(
-payload.new.username+" sent a message"
+payload.new.username + " sent a message"
 );
+
+}
 
     }
     }
