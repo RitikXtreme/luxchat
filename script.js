@@ -38,7 +38,6 @@ function addMessage(msg) {
 
     chatBox.appendChild(div);
 }
-
 sendBtn.onclick = async () => {
     if(username.value.trim()==="" || message.value.trim()===""){
         alert("Enter your name and message");
@@ -60,51 +59,7 @@ myName = username.value.trim();
     message.value="";
 };
 
-const ding = document.getElementById("ding");
-const notify = document.getElementById("notify");
 
-let myName = "";
-
-function showNotification(text){
-
-    notify.textContent = "🔔 " + text;
-
-    notify.classList.add("show");
-
-    setTimeout(()=>{
-        notify.classList.remove("show");
-    },3000);
-
-}
-
-client
-.channel("chat-room")
-.on(
-"postgres_changes",
-{
-event:"INSERT",
-schema:"public",
-table:"messages"
-},
-(payload)=>{
-
-addMessage(payload.new);
-
-chatBox.scrollTop=chatBox.scrollHeight;
-
-if(
-myName !== "" &&
-payload.new.username !== myName
-){
-
-ding.play().catch(()=>{});
-
-showNotification(
-payload.new.username + " sent a message"
-);
-
-}
-
-}
-)
 .subscribe();
+
+loadMessages();
